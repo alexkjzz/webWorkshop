@@ -5,11 +5,11 @@ services:
     build: ./api
     container_name: postgres_db
     ports:
-      - "5432:5432"
+      - "5434:5434"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_USER=user
+      - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=password
       - POSTGRES_DB=mydatabase
   # app:
