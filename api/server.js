@@ -1,4 +1,4 @@
-import express from "express";
+const express = require("express");
 const postgres = require("postgres");
 const z = require("zod");
 
