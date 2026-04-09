@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  db:
+    build: ./api
+    container_name: postgres_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=mydatabase
+  # app:
+  #   build: ./api
+  #   command: node server.js
+  #   depends_on:
+  #     - db
+
+volumes:
+  postgres_data:
