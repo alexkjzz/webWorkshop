@@ -7,8 +7,7 @@ ENV POSTGRES_PASSWORD=password
 ENV POSTGRES_DB=mydatabase
 
 # Optionnel : Exposer le port par défaut
-EXPOSE 5433
-
+EXPOSE 5434
 # Note : L'image officielle exécute automatiquement le démarrage de Postgres,
 # pas besoin de redéfinir la commande CMD sauf besoin spécifique.
 COPY init.sql /docker-entrypoint-initdb.d/
